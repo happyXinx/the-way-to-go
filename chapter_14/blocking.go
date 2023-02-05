@@ -1,15 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func f1(in chan int) {
 	fmt.Println("a")
 	fmt.Println(<-in)
 }
 
-func main() {
-	var ch chan int
-	//go f1(ch)
-	ch <- 2
-	println(<-ch)
-}
+//
+//func main() {
+//	ch := make(chan int)
+//	ch <- 2 // 这里一直阻塞，运行不到下面
+//	go f1(ch)
+//
+//}
