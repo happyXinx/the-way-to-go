@@ -19,11 +19,12 @@ func numEchoRange(in <-chan int, done chan<- bool) {
 	done <- true
 }
 
-func main() {
-	numChan := make(chan int)
-	done := make(chan bool)
-	go numGen(0, 10, numChan)
-	go numEchoRange(numChan, done)
-
-	<-done
-}
+//
+//func main() {
+//	numChan := make(chan int)
+//	done := make(chan bool)
+//	go numGen(0, 10, numChan)
+//	go numEchoRange(numChan, done)
+//
+//	<-done
+//}
